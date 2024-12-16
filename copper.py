@@ -76,7 +76,9 @@ elif selected == "Prediction":
                        width = st.text_input("Enter Width (Min:1 & Max:2990)")
                        customer = st.text_input("Enter Customer ID (Min:12458 & Max:30408185)")
                        submit_button = st.form_submit_button(label = "PREDICT SELLING PRICE")
-                       st.markdown("""
+                       if submitted:
+                          st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
+                          st.markdown("""
                                  <style>
                                  div.stButton > button:first-child {
                                    background-color: #009999;
@@ -101,7 +103,9 @@ elif selected == "Prediction":
                        thickness = st.text_input("Enter Thickness (Min:0.18 & Max:400)")
                        width = st.text_input("Enter Width (Min:1 & Max:2990)")
                        customer = st.text_input("Enter Customer ID (Min:12458 & Max:30408185)")
-                       submit_button = st.form_submit_button(label = "PREDICT SELLING PRICE")
+                       submit_button = st.form_submit_button(label = "PREDICT STATUS")
+                       if submitted:
+                          st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
                        st.markdown("""
                                  <style>
                                  div.stButton > button:first-child {
