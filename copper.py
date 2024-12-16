@@ -3,6 +3,7 @@ from streeamlit_option_menu import option_menu
 import numpy as np
 import pandas as pd
 import pickle
+import html
 
 st. set_page_config(page_title='Indutrial Copper', initial_sidebar_state= 'expanded',
                    layout= 'wide')
