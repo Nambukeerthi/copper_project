@@ -8,5 +8,5 @@ sqlalchemy
 plotly
 plotly.express
 numpy
-html
+jason
 pickle
