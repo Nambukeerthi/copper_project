@@ -106,7 +106,7 @@ elif selected == "Prediction":
                        submit_button = st.form_submit_button(label = "PREDICT STATUS")
                        if submitted:
                           st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
-                       st.markdown("""
+                          st.markdown("""
                                  <style>
                                  div.stButton > button:first-child {
                                    background-color: #009999;
