@@ -47,7 +47,7 @@ elif selected == "Prediction":
   title_text ='''<h1 style='font_size: 32px; text-align: center; color: grey;' >Copper Selling Price and Status prediction</h1'''
   st.markdown(title_text, unsafe_allow_html=True)
   
-      tab1,tab2 = st.tabs(["PREDICT SELLING PRICE"],["PREDICT STATUS"])
+    tab1,tab2 = st.tabs(["PREDICT SELLING PRICE"],["PREDICT STATUS"])
       with tab1:
             country_values = [28.,  25.,  30.,  32.,  38.,  78.,  27.,  77., 113.,  79.,  26., 39.,  40.,  84.,  80., 107.,  89.]
             status_values = ['Won', 'Draft', 'To be approved', 'Lost', 'Not lost for AM', 'Wonderful', 'Revised', 'Offered', 'Offerable']
