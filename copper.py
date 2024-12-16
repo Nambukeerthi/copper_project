@@ -85,7 +85,7 @@ elif selected == "Prediction":
                                  }
                                  </sytle>
                                  """, unsafe_allow_html=True)      
-     with tab2:
+    with tab2:
               #with st.form("my form") 
                   col1,col2,col3 = st.columns[5,2,5]
                   with col1:
