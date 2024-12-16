@@ -96,7 +96,7 @@ elif selected == "Prediction":
                        application =  st.selectbox("Application",application_values, key =4)
                        product_ref =  st.selectbox("Product Reference",product_ref_values, key =5)
                   with col3:
-                       st.write(f'<h5 style="color:rgb(0, 153, 153, 0.4);">NOTE: Min & Max given for reference, y)
+                       #st.write(f'<h5 style="color:rgb(0, 153, 153, 0.4);">NOTE: Min & Max given for reference, y)
                        quantity_tons = st.text_input("Enter Quantity Tons (Min:611728 & Max:1722207579)")
                        thickness = st.text_input("Enter Thickness (Min:0.18 & Max:400)")
                        width = st.text_input("Enter Width (Min:1 & Max:2990)")
