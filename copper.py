@@ -48,7 +48,7 @@ elif selected == "Prediction":
     st.markdown(title_text, unsafe_allow_html=True)
   
     tab1,tab2 = st.tabs(["PREDICT SELLING PRICE"],["PREDICT STATUS"])
-      with tab1:
+       with tab1:
             country_values = [28.,  25.,  30.,  32.,  38.,  78.,  27.,  77., 113.,  79.,  26., 39.,  40.,  84.,  80., 107.,  89.]
             status_values = ['Won', 'Draft', 'To be approved', 'Lost', 'Not lost for AM', 'Wonderful', 'Revised', 'Offered', 'Offerable']
             item_type_values = ['W', 'WI', 'S', 'Others', 'PL', 'IPL', 'SLAWR']
@@ -85,7 +85,7 @@ elif selected == "Prediction":
                                  }
                                  </sytle>
                                  """, unsafe_allow_html=True)
-        with tab2:
+           with tab2:
               with st.form("my form") 
                 col1,col2,col3 = st.columns[5,2,5]
                     with col1:
