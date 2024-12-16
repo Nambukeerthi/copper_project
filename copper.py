@@ -44,8 +44,8 @@ if selected == "Home":
         st.markdown(" ")
 
 elif selected == "Prediction":
-  title_text ='''<h1 style='font_size: 32px; text-align: center; color: grey;' >Copper Selling Price and Status prediction</h1'''
-  st.markdown(title_text, unsafe_allow_html=True)
+    title_text ='''<h1 style='font_size: 32px; text-align: center; color: grey;' >Copper Selling Price and Status prediction</h1'''
+    st.markdown(title_text, unsafe_allow_html=True)
   
     tab1,tab2 = st.tabs(["PREDICT SELLING PRICE"],["PREDICT STATUS"])
       with tab1:
