@@ -90,6 +90,8 @@ elif selected == "Prediction":
                                            }
                                            </sytle>
                                            """, unsafe_allow_html=True)      
+
+  
     with tab2:
       
               with st.form("my form"): 
