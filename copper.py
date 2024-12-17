@@ -61,6 +61,7 @@ elif selected == "Prediction":
                                   164337175, 1668701725, 1665572032,     611728, 1721130331,
                                   1693867563,     611733, 1690738219, 1722207579,  929423819,
                                   1665584320, 1665584662, 1665584642]
+      
           with st.form("my form"): 
             col1,col2,col3 = st.columns([5,2,5])
             with col1:
@@ -89,7 +90,7 @@ elif selected == "Prediction":
                                  </sytle>
                                  """, unsafe_allow_html=True)      
     with tab2:
-                with st.form("my form"): 
+             with st.form("my form"): 
                   col1,col2,col3 = st.columns([5,2,5])
                   with col1:
                        st.write (" ")
