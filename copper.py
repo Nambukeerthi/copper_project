@@ -90,7 +90,7 @@ elif selected == "Prediction":
                                            }
                                            </sytle>
                                            """, unsafe_allow_html=True)      
-                                   st.write(f"Predicting the price for: ok ")
+                                     st.write(f"Predicting the price for: ok ")
   
     with tab2:
       
