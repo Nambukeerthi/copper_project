@@ -102,11 +102,11 @@ elif selected == "Prediction":
                       col4,col5,col6 = st.columns([5,2,5])
                       with col4:
                                  st.write (" ")
-                                 status =  st.selectbox("Status",status_values,key =1)
-                                 item_type =  st.selectbox("Item Type",item_type_values, key =2)
-                                 country =  st.selectbox("Country",country_values, key =3)
-                                 application =  st.selectbox("Application",application_values, key =4)
-                                 product_ref =  st.selectbox("Product Reference",product_ref_values, key =5)
+                                 status =  st.selectbox("Status",status_values,key =6)
+                                 item_type =  st.selectbox("Item Type",item_type_values, key =7)
+                                 country =  st.selectbox("Country",country_values, key =8)
+                                 application =  st.selectbox("Application",application_values, key =9)
+                                 product_ref =  st.selectbox("Product Reference",product_ref_values, key =10)
                       with col6:
                                  #st.write(f'<h5 style="color:rgb(0, 153, 153, 0.4);">NOTE: Min & Max given for reference, y)
                                  quantity_tons = st.text_input("Enter Quantity Tons (Min:611728 & Max:1722207579)")
