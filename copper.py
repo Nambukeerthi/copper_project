@@ -93,7 +93,7 @@ elif selected == "Prediction":
                                   
                       if submitted:
                                       predict_text ='''<h4 style='font_size: 8px; text-align: center; color: red;' > The price value </h4'''
-                                      st.write(predict_text, status)
+                                      st.markdown(predict_text, unsafe_allow_html=True, status)
   
     with tab2:
       
