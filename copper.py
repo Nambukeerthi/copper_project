@@ -92,7 +92,8 @@ elif selected == "Prediction":
                                            """, unsafe_allow_html=True)   
                                   
                       if submitted:
-                                      st.write("Predicting the price for:", status)
+                                      predict_text ='''<h4 style='font_size: 8px; text-align: center; color: red;' > The price value </h4'''
+                                      st.write(predict_text, status)
   
     with tab2:
       
