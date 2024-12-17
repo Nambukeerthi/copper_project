@@ -83,7 +83,7 @@ elif selected == "Prediction":
                                     st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
                                     st.markdown("""
                                            <style>
-                                           div.stButton > button:first-child {
+                                            div.stButton > button:first-child {
                                              background-color: #009999;
                                              color: white;
                                              width: 100%;
