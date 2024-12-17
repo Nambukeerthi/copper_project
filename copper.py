@@ -99,7 +99,7 @@ elif selected == "Prediction":
       
               with st.form("my form"): 
                      
-                         col4,col5,col6 = st.columns([5,2,5])
+                      col4,col5,col6 = st.columns([5,2,5])
                       with col4:
                                  st.write (" ")
                                  status =  st.selectbox("Status",status_values,key =1)
