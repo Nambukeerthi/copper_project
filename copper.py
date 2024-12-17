@@ -79,9 +79,9 @@ elif selected == "Prediction":
                                  width = st.text_input("Enter Width (Min:1 & Max:2990)")
                                  customer = st.text_input("Enter Customer ID (Min:12458 & Max:30408185)")
                                  submit_button = st.form_submit_button(label = "PREDICT SELLING PRICE")
-                                 if submitted:
+                                 #if submitted:
                                     #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
-                                    st.markdown("""
+                                 st.markdown("""
                                            <style>
                                             div.stButton > button:first-child {
                                              background-color: #009999;
@@ -89,7 +89,8 @@ elif selected == "Prediction":
                                              width: 100%;
                                            }
                                            </sytle>
-                                           """, unsafe_allow_html=True)      
+                                           """, unsafe_allow_html=True)   
+                                  if submitted:
                                       st.write("Predicting the price for: ok ")
   
     with tab2:
