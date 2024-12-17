@@ -80,7 +80,7 @@ elif selected == "Prediction":
                                  customer = st.text_input("Enter Customer ID (Min:12458 & Max:30408185)")
                                  submit_button = st.form_submit_button(label = "PREDICT SELLING PRICE")
                                  #if submitted:
-                                    #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
+                                 #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
                                  st.markdown("""
                                            <style>
                                             div.stButton > button:first-child {
@@ -90,7 +90,8 @@ elif selected == "Prediction":
                                            }
                                            </sytle>
                                            """, unsafe_allow_html=True)   
-                                   if submitted:
+                                  
+                        if submitted:
                                       st.write("Predicting the price for: ok ")
   
     with tab2:
