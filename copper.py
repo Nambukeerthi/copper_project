@@ -12,7 +12,7 @@ st. set_page_config(
                    layout= 'wide'
                    )
 #streamlit part
-title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' >Copper Selling Price and Status prediction</h1'''
+title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > COPPER PRICE PREDICTON AND STATUS PREDICTION </h1'''
 st.markdown(title_text, unsafe_allow_html=True)
 #st.title("INDURTRIAL COPPER MODELLING ")
 st.markdown(" ")
