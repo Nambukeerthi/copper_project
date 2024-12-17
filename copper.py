@@ -92,7 +92,7 @@ elif selected == "Prediction":
                                            """, unsafe_allow_html=True)   
                                   
                       if submitted:
-                                      st.write("Predicting the price for: ok ")
+                                      st.write("Predicting the price for:", status)
   
     with tab2:
       
