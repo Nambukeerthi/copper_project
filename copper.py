@@ -100,8 +100,8 @@ elif selected == "Prediction":
                                       #new_sample_ohe = t_loaded.transform(new_sample[:, [7]]).toarray()
                                       #new_sample_be = s_loaded.transform(new_sample[:, [8]]).toarray()
                                       #new_sample = np.concatenate(
-                                          (new_sample[:, [0, 1, 2, 3, 4, 5, 6]], new_sample_ohe, new_sample_be),
-                                          axis=1)
+                                          #(new_sample[:, [0, 1, 2, 3, 4, 5, 6]], new_sample_ohe, new_sample_be),
+                                          #axis=1)
                                       #new_sample1 = scaler_loaded.transform(new_sample)
                                       new_pred = loaded_model.predict(new_sample)[0]
               
