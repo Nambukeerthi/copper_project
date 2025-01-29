@@ -90,8 +90,8 @@ elif selected == "Prediction":
                                         scaler_loaded = pickle.load(f)
                                       with open("models/ct.pkl", 'rb') as f:
                                         t_loaded = pickle.load(f)
-                                      #with open(r"s.pkl", 'rb') as f:
-                                          #s_loaded = pickle.load(f)
+                                      with open(r"s.pkl", 'rb') as f:
+                                          s_loaded = pickle.load(f)
               
                                       # -----Sending that data to the trained models for selling price prediction-----
                                       new_sample = np.array([[np.log(float(quantity_tons)), application, np.log(float(thickness)),
