@@ -8,4 +8,4 @@ sqlalchemy
 plotly
 plotly.express
 numpy
-pickle5
+pypickle
