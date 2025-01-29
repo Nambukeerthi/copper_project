@@ -5,6 +5,7 @@ import pandas as pd
 import pickle
 import html
 import json
+import sklearn
 
 st. set_page_config(
                    page_title='Indutrial Copper', 
