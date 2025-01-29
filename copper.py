@@ -85,7 +85,7 @@ elif selected == "Prediction":
 
                 
                         
-                                      with open("/models/cmodel.pkl", 'rb') as file:
+                                      with open("/cmodel.pkl", 'rb') as file:
                                           loaded_model = pickle.load(file)
                                       with open("/models/cscaler.pkl", 'rb') as f:
                                           scaler_loaded = pickle.load(f)
