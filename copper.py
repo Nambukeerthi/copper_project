@@ -79,22 +79,38 @@ elif selected == "Prediction":
                                  width = st.text_input("Enter Width (Min:1 & Max:2990)")
                                  customer = st.text_input("Enter Customer ID (Min:12458 & Max:30408185)")
                                  submitted = st.form_submit_button(label = "PREDICT SELLING PRICE")
-                                 #if submitted:
-                                 #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
-                                 st.markdown("""
-                                           <style>
-                                            div.stButton > button:first-child {
-                                             background-color: #009999;
-                                             color: white;
-                                             width: 100%;
-                                           }
-                                           </sytle>
-                                           """, unsafe_allow_html=True)   
                                   
-                      if submitted:
-                                      predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price </h5'''
-                                      st.markdown(predict_text, unsafe_allow_html=True)
-  
+                                  
+                                 if submitted:
+
+                
+                        
+                                      with open(r"/models/cmodel.pkl", 'rb') as file:
+                                          loaded_model = pickle.load(file)
+                                      with open(r"/models/cscaler.pkl", 'rb') as f:
+                                          scaler_loaded = pickle.load(f)
+                                      with open(r"/models/ct.pkl", 'rb') as f:
+                                          t_loaded = pickle.load(f)
+                                      #with open(r"s.pkl", 'rb') as f:
+                                          #s_loaded = pickle.load(f)
+              
+                                      # -----Sending that data to the trained models for selling price prediction-----
+                                      new_sample = np.array([[np.log(float(quantity_tons)), application, np.log(float(thickness)),
+                                                              float(width), country, float(customer), int(product_ref), item_type,
+                                                              status]])
+                                      new_sample_ohe = t_loaded.transform(new_sample[:, [7]]).toarray()
+                                      new_sample_be = s_loaded.transform(new_sample[:, [8]]).toarray()
+                                      new_sample = np.concatenate(
+                                          (new_sample[:, [0, 1, 2, 3, 4, 5, 6]], new_sample_ohe, new_sample_be),
+                                          axis=1)
+                                      new_sample1 = scaler_loaded.transform(new_sample)
+                                      new_pred = loaded_model.predict(new_sample1)[0]
+              
+                                      # Used np.log earlier to handle data discrepancies, so to get the real output using np.exp
+                                      st.write('## :green[Predicted selling price:] ', np.exp(new_pred))
+                                      #predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price </h5'''
+                                      #st.markdown(predict_text, unsafe_allow_html=True)
+      
     with tab2:
       
               with st.form("my form 2"): 
