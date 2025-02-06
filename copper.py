@@ -92,7 +92,7 @@ elif selected == "Prediction":
                               flag=1  
                               break
                       
-                 if submit_button and flag==1:
+                  if submit_button and flag==1:
                     
                       if len(i)==0:
                           st.write("please enter a valid number space not allowed")
