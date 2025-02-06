@@ -123,7 +123,7 @@ elif selected == "Prediction":
       
     with tab2:
       
-                with st.form("my_form1"):
+                   with st.form("my_form1"):
                         col1,col2,col3=st.columns([5,1,5])
                         with col1:
                             cquantity_tons = st.text_input("Enter Quantity Tons (Min:611728 & Max:1722207579)")
