@@ -102,8 +102,9 @@ elif selected == "Prediction":
                   if submit_button and flag==0:
                       
                       import pickle
+                      from sklearn.utils import fix_imports
                       with open(r"data/model.pkl", 'rb') as file:
-                          loaded_model = pickle.load(file)
+                          loaded_model = pickle.load(file, fix_imports=True)
                       with open(r'data/scaler.pkl', 'rb') as f:
                           scaler_loaded = pickle.load(f)
           
