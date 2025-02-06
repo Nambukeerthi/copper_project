@@ -149,7 +149,7 @@ elif selected == "Prediction":
                                 cflag=1  
                                 break
                         
-                   if csubmit_button and cflag==1:
+                    if csubmit_button and cflag==1:
                         if len(k)==0:
                             st.write("please enter a valid number space not allowed")
                         else:
