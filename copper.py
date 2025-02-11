@@ -34,11 +34,24 @@ with st.sidebar:
 if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
-        #img1 = Image.open("images/phonepe3.jpg")
-        #st.image( img1,use_column_width=True,channels="RGB" )
+        img1 = Image.open("data/copper_pipe.jpeg")
+        st.image( img1,use_column_width=True,channels="RGB" )
         st.markdown(" ")
         st.markdown(" ")
         st.markdown(" ")
+        st.subheader("COPPER FACTS")
+        line = ''' 
+        Copper is a chemical element with the symbol Cu. Atomic Number: 29. Atomic Weight: 63.546 AMU (atomic mass unit).
+        
+        Copper comes from the Latin word cuprum, meaning “from the island of Cyprus."
+
+        Copper is man’s oldest metal, dating back more than 10,000 years. A copper pendant discovered in what is now northern Iraq has been dated to about 8,700 B.C.
+        
+        '''
+        st.markdown(line)
+        st.subheader("USE")
+        st.markdown("*From electrical and thermal conductivity to its antimicrobial properties, copper is an extremely versatile metal with a long history of making the world work better.*")
+        
 
 elif selected == "Prediction":
     
