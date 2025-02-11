@@ -36,7 +36,7 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         img1 = Image.open("data/copper_pipe.jpeg")
-        st.image( img1,use_column_width=True,channels="RGB" )
+        st.image( img1,use_container_width=True,channels="RGB" )
         st.markdown(" ")
         st.markdown(" ")
         st.markdown(" ")
