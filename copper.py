@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from PIL import Image
 import numpy as np
 import pandas as pd
 import pickle
