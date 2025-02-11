@@ -52,8 +52,12 @@ if selected == "Home":
         st.markdown(line)
         st.subheader("USAGE")
         st.markdown("*From electrical and thermal conductivity to its antimicrobial properties, copper is an extremely versatile metal with a long history of making the world work better.*")
+        st.markdown(" ")
+        st.markdown(" ")
+        st.markdown(" ") 
+  
+        st.markdown("[Project Github Page](https://github.com/Nambukeerthi/copper_project/)")
         
-
 elif selected == "Prediction":
     
   
