@@ -57,6 +57,7 @@ if selected == "Home":
         st.markdown(" ") 
   
         st.markdown("[PROJECT GITHUB PAGE](https://github.com/Nambukeerthi/copper_project/)")
+        #st.markdown("[PROJECT LINKED_IN PAGE](https://github.com/Nambukeerthi/copper_project/)")
         
 elif selected == "Prediction":
     
