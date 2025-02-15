@@ -20,10 +20,12 @@ st. set_page_config(
                    initial_sidebar_state= 'expanded',
                    layout= 'wide'
                    )
+
+
 #streamlit part
+
 title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > COPPER PRICE PREDICTON AND STATUS PREDICTION </h1'''
 st.markdown(title_text, unsafe_allow_html=True)
-#st.title("INDURTRIAL COPPER MODELLING ")
 st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
@@ -57,14 +59,14 @@ if selected == "Home":
         st.markdown(" ") 
   
         st.markdown("[PROJECT GITHUB PAGE](https://github.com/Nambukeerthi/copper_project/)")
-        #st.markdown("[PROJECT LINKED_IN PAGE](https://github.com/Nambukeerthi/copper_project/)")
+        st.markdown("[PROJECT LINKED_IN PAGE](https://www.linkedin.com/posts/keerthi-r-9b8839283_project-name-industrial-copper-model-project-activity-7296603762872262657-9mjq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUARVwBltI0ri4ApeK7YzcbHxGViaHfWEM)")
         
 elif selected == "Prediction":
     
   
     tab1,tab2 = st.tabs(["PREDICT SELLING PRICE","PREDICT STATUS"])
     with tab1:
-                       # Define the possible values for the dropdown menus
+                  # Define the possible values for the dropdown menus
                   status_options = ['Won', 'Draft', 'To be approved', 'Lost', 'Not lost for AM', 'Wonderful', 'Revised', 'Offered', 'Offerable']
                   item_type_options = ['W', 'WI', 'S', 'Others', 'PL', 'IPL', 'SLAWR']
                   country_options = [28., 25., 30., 32., 38., 78., 27., 77., 113., 79., 26., 39., 40., 84., 80., 107., 89.]
@@ -121,7 +123,6 @@ elif selected == "Prediction":
                   if submit_button and flag==0:
                       
                       import pickle
-                      # from sklearn.utils import fix_imports
                       with open(r"data/model.pkl", 'rb') as file:
                           loaded_model = pickle.load(file)
                       with open(r'data/scaler.pkl', 'rb') as f:
@@ -187,7 +188,7 @@ elif selected == "Prediction":
                             ct_loaded = pickle.load(f)
             
                         # Predict the status for a new sample
-                        # 'quantity tons_log', 'selling_price_log','application', 'thickness_log', 'width','country','customer','product_ref']].values, X_ohe
+                        
                         new_sample = np.array([[np.log(float(cquantity_tons)), np.log(float(cselling)), capplication, np.log(float(cthickness)),float(cwidth),ccountry,int(ccustomer),int(product_ref),citem_type]])
                         new_sample_ohe = ct_loaded.transform(new_sample[:, [8]]).toarray()
                         new_sample = np.concatenate((new_sample[:, [0,1,2, 3, 4, 5, 6,7]], new_sample_ohe), axis=1)
