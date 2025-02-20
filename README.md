@@ -1,10 +1,10 @@
 
-<h1> Industrial Copper Modeling </h1>
+<h1> Industrial_Copper_Modeling </h1>
 
 
 <h1 align="center">
   <br>
-  <a href=""><img src="youtube_project.jpeg" alt="Youtube Data warehousing" width="200"></a>
+  <a href=""><img src="data/copper-wire-1.jpg" alt="Industrial Copper Modeling" width="200"></a>
   <br>
  
   <br>
@@ -12,26 +12,30 @@
 
 
 <p align="center">
-  <a href="#Introduction">Key Features</a> •
-  <a href="#Technologies Applied">Download</a> •  
+  <a href="#Introduction"></a> 
+  <a href="#Technologies Applied"></a>  
 </p>
 
-Video Link: [Linked-IN Video](https://www.linkedin.com/posts/keerthi-r-9b8839283_project-name-youtube-data-harvesting-and-activity-7296598343412068352-lwgY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUARVwBltI0ri4ApeK7YzcbHxGViaHfWEM)
+Video Link: [Linked-IN Video](https://www.linkedin.com/posts/keerthi-r-9b8839283_project-name-industrial-copper-model-project-activity-7296603762872262657-9mjq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUARVwBltI0ri4ApeK7YzcbHxGViaHfWEM)
 
 Portfolio: [Nambu Keerthi](https://portfolio-b5zieg8xn5nhwau5b4bhp8.streamlit.app/)
 
 ## Introduction 
-The purpose of this project is to create an intuitive Streamlit app that pulls data about a YouTube channel from the Google API, stores it in a MongoDB database, moves it to a SQL data warehouse, and then lets users perform searches for channel details and join tables to view the data.
+This project aims to develop two machine learning models for the copper business:
 
+1. Selling Price Prediction Model – To accurately forecast copper selling prices.
+2. Lead Classification Model – To classify leads effectively.
 
+Manually predicting prices and managing leads is time-consuming and may lead to poor decisions. These models will automate the process, improving accuracy and efficiency. These models will help in making better price decisions and efficient lead management. 
+
+Domain : *Manufacturing*
 
 ## Technologies Applied
-* virtual environment (.venv)
-* python
-* streamlit 
-* Youtube Api 
-* AWS RDS Database
-* MySQL
+* Python
+* Streamlit 
+* Pandas 
+* Numpy
+* Skikit- Learn
 
 
 ## Project Setup
@@ -40,38 +44,50 @@ The purpose of this project is to create an intuitive Streamlit app that pulls d
 pip install -r requirements.txt
 ```
 
-2. Now one need setup a Google Cloud Project on Google Cloud Console, and then enable the Youtube API v3, after that generate the credentials and copy the api_key. Now below is the Python code to use that API.
+2. Second get the Data from the Data source and Load the data for Data cleaning and Pre Processing. Then finding the outliers for removing then make it visible the dataset columns by using matplotlib and seaborn.
 ```
-youtube = build('youtube', 'v3', developerKey="your api_key goes here")
-```
-
-3. After that one need to create a MySQL Database in there local system. Now below is the Python code to connect to that SQL Database
-```
-hostname = "your host name goes here"
-database = "your database name goes here"
-username = "your username goes here"
-pwd = "your password goes here"
-
-mydb = sql.connect(host=hostname, user=username, password=pwd, database=database)
-                   
-cursor1 = mydb.cursor()
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.distplot(dataframe['column_name'])
+plt.show()
 ```
 
-4. To run the application
+3. After that should make heatmap visualization to knowning how data values are spreaded there. 
 ```
-streamlit run main.py
+x=df_p[['quantity tons_log','application','thickness_log','width','selling_price_log','country','customer','product_ref']].corr()
+sns.heatmap(x, annot=True, cmap="YlGnBu")
+
+```
+4. Then split the dataset as well as  train and test data for creating ML models. Save the models in ".pkl" file 
+```
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import GridSearchCV
+
+```
+  
+
+6. Last we can run the streamlit app
+```
+streamlit run copper.py
 ```
 
    
 ## Project Methodology
 
-1. First click the "Create DB" button after that the database will created
+**Selling Price Prediction**
 
-2. Enter a YouTube channel ID in the input field and click the "Details" button. The channel details will then be displayed. After that, click the "Upload" button to upload channel details such as Channel ID, Channel Name, Playlist ID, Subscribers, Views, Total Videos, 
-   Description, and more, to the SQL database.
+1. Select the "Predict Selling Price" tab. Fill in the following required informations.
 
-3. Now from the sidebar select the Task Menu and Select the required statement.
+2. Click the "Predict Selling Price" button. The app will display the predicted selling price based on the provided information.
 
-3. According to the selected statement the data will be queried from the SQL Database and will be displayed here on the screen in the streamlit application
+**Status Prediction**
 
-4. through the click the "Drob DB" button the created database and details will droped.
+3. Select the "Predict Status" tab. Fill in the following required informations.
+
+
+4. Click the "Predict Status" button. The app will display the predicted selling price based on the provided information.
