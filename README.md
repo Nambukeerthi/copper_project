@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <br>
-  <a href=""><img src="data/copper-wire-1.jpg" alt="Industrial Copper Modeling" width="200"></a>
+  <a href=""><img src="data/copper-wire-1.jpg" alt="Industrial Copper Modeling" width="400"></a>
   <br>
  
   <br>
