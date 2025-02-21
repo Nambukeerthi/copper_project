@@ -28,7 +28,7 @@ This project aims to develop two machine learning models for the copper business
 
 Manually predicting prices and managing leads is time-consuming and may lead to poor decisions. These models will automate the process, improving accuracy and efficiency. These models will help in making better price decisions and efficient lead management. 
 
-Domain : *Manufacturing*
+**Domain : *Manufacturing* **
 
 ## Technologies Applied
 * Python
